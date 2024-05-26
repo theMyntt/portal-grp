@@ -5,9 +5,11 @@ import { RouterOutlet } from '@angular/router';
   selector: 'app-root',
   standalone: true,
   imports: [RouterOutlet],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.scss'
+  template: `
+  <div>
+    <router-outlet></router-outlet>
+  </div>
+  `,
 })
 export class AppComponent {
-  title = 'portal-grp';
 }
