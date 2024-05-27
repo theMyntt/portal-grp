@@ -11,7 +11,7 @@ import { Component, Input } from '@angular/core';
         <img src="assets/img/{{ imageName }}" />
       </div>
       <div class="card-content">
-        <span class="card-title">{{ title }}</span>
+        <h2 class="card-title">{{ title }}</h2>
         <p>{{ description }}</p>
       </div>
       <h4>{{ isValidPrice(price) }}</h4>
