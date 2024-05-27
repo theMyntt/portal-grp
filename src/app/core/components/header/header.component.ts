@@ -4,11 +4,13 @@ import { Component } from '@angular/core';
   selector: 'header-component',
   template: `
   <div id="header-component">
-    <h3>PORTAL GRP</h3>
+    <h3 (click)="redirect()">PORTAL GRP</h3>
   </div>
   `,
   styleUrl: './header.component.scss'
 })
 export class HeaderComponent {
-
+  redirect() {
+    window.location.href = '/home';
+  }
 }
