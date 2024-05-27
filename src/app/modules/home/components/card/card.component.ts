@@ -15,7 +15,10 @@ import { Component, Input } from '@angular/core';
         <h2 class="card-title">{{ title }}</h2> <br />
         <p>{{ description }}</p>
       </div>
-      <br/><h4>{{ isValidPrice(price) }}</h4><br/>
+      <br/>
+      <h4>{{ isValidPrice(price) }}</h4>
+      <span *ngIf="unity" style="font-size: 12px;">(cada unidade)</span>
+      <br/><br *ngIf="unity" />
       <div class="card-action">
         <a href="{{ link }}" class="template-btn">Compre agora!</a>
       </div>
@@ -29,6 +32,7 @@ export class CardComponent {
   @Input() public description: string = '';
   @Input() public price: string = '';
   @Input() public link: string = '';
+  @Input() public unity: boolean = false;
 
   isValidPrice(price: string): string {
     const trimmedPrice = price.trim();
