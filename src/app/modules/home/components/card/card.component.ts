@@ -9,14 +9,15 @@ import { Component, Input } from '@angular/core';
     <div class="card-component">
       <div class="card-image" *ngIf="imageName">
         <img src="assets/img/{{ imageName }}" />
+        <br /> <br />
       </div>
       <div class="card-content">
-        <h2 class="card-title">{{ title }}</h2>
+        <h2 class="card-title">{{ title }}</h2> <br />
         <p>{{ description }}</p>
       </div>
-      <h4>{{ isValidPrice(price) }}</h4>
+      <br/><h4>{{ isValidPrice(price) }}</h4><br/>
       <div class="card-action">
-        <a href="{{ link }}">Fazer proposta.</a>
+        <a href="{{ link }}" class="template-btn">Compre agora!</a>
       </div>
     </div>
   `,
