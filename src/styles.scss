@@ -7,11 +7,17 @@
 }
 
 .app-container {
-  width: 100vw;
   padding: 0 20px;
   margin-top: 120px;
 }
 
 h3 {
   font-weight: 200;
+}
+
+@media (min-width: 900px) {
+  .app-container {
+    width: 50%;
+    margin: 120px auto 0 auto;
+  }
 }
